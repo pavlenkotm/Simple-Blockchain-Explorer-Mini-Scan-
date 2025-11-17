@@ -5,8 +5,8 @@ import NetworkSelector from '@/components/NetworkSelector';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blockchain Explorer - Mini-Scan',
-  description: 'A mini blockchain explorer for EVM networks',
+  title: 'Mini-Scan - Advanced Blockchain Ecosystem',
+  description: 'Complete blockchain ecosystem with explorer, analytics, gas tracker, tokens, NFTs, portfolio, and more for EVM networks',
 };
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
                   </div>
                 </Link>
 
-                <nav className="hidden md:flex items-center space-x-6">
+                <nav className="hidden lg:flex items-center space-x-6">
                   <Link
                     href="/"
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -46,10 +46,46 @@ export default function RootLayout({
                     Home
                   </Link>
                   <Link
-                    href="/block/latest"
+                    href="/dashboard"
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   >
-                    Blocks
+                    Dashboard
+                  </Link>
+                  <Link
+                    href="/gas-tracker"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Gas Tracker
+                  </Link>
+                  <Link
+                    href="/tokens"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Tokens
+                  </Link>
+                  <Link
+                    href="/nft"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    NFT
+                  </Link>
+                  <Link
+                    href="/portfolio"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Portfolio
+                  </Link>
+                  <Link
+                    href="/compare"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Compare
+                  </Link>
+                  <Link
+                    href="/api-docs"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    API
                   </Link>
                 </nav>
 

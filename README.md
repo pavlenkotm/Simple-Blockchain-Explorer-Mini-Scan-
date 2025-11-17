@@ -1,15 +1,58 @@
-# 🔍 Mini-Scan - Simple Blockchain Explorer
+# 🚀 Mini-Scan - Advanced Blockchain Ecosystem
 
-A modern, feature-rich blockchain explorer for EVM-compatible networks (Ethereum, Base, Arbitrum). Built with Next.js 14, TypeScript, and ethers.js.
+A comprehensive, production-ready blockchain ecosystem for EVM-compatible networks (Ethereum, Base, Arbitrum). Features explorer, analytics dashboard, gas tracker, token analytics, NFT gallery, portfolio tracker, and developer API. Built with Next.js 14, TypeScript, and ethers.js.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
 ![ethers.js](https://img.shields.io/badge/ethers.js-6.13-7c3aed)
 
-## ✨ Features
+## ✨ Ecosystem Features
 
-### 🔎 Search & Explore
+### 📊 Analytics Dashboard
+- **Real-time Network Statistics**: Current block, TPS, gas prices, 24h metrics
+- **Gas Price History**: Interactive charts showing historical gas prices
+- **Transaction Volume**: Visual representation of network activity
+- **Network Health**: Block time, active addresses, transaction trends
+
+### ⛽ Gas Tracker
+- **Live Gas Prices**: Real-time updates every 15 seconds
+- **Multi-tier Pricing**: Slow, Standard, Fast, Instant options
+- **Cost Calculator**: Estimate transaction costs for any gas limit
+- **Common Operations**: Pre-calculated costs for transfers, swaps, NFT mints
+- **48-hour History**: Track gas price trends
+
+### 🪙 Token Analytics
+- **Top Tokens**: Popular ERC20 tokens on each network
+- **Token Search**: Look up any token by contract address
+- **Token Details**: Name, symbol, decimals, total supply
+- **Contract Links**: Direct navigation to contract pages
+
+### 🖼️ NFT Gallery
+- **Collection Explorer**: View NFT collection information
+- **Ownership Search**: Find NFTs owned by any address
+- **Metadata Display**: Images, names, descriptions, attributes
+- **IPFS Support**: Automatic IPFS gateway resolution
+
+### 💼 Portfolio Tracker
+- **Multi-Wallet**: Track multiple addresses simultaneously
+- **Aggregated Statistics**: Total balance, transaction count
+- **Individual Breakdowns**: Per-wallet details and analytics
+- **Contract Detection**: Identify contracts vs EOAs
+
+### 🔬 Network Comparison
+- **Side-by-side Stats**: Compare all EVM networks
+- **Cost Analysis**: Transaction cost comparison across networks
+- **Performance Metrics**: TPS, block time, gas prices
+- **Network Information**: Chain IDs, block explorers
+
+### 📚 API Documentation
+- **Public API**: Free access to all blockchain data
+- **RESTful Endpoints**: Address, block, transaction, analytics
+- **Code Examples**: Ready-to-use integration examples
+- **Response Formats**: Detailed schema documentation
+
+### 🔎 Core Explorer Features
 - **Universal Search**: Search by wallet address, transaction hash, or block number
 - **Multi-Network Support**: Switch between Ethereum, Base, and Arbitrum networks
 - **Real-time Data**: Direct RPC connection for live blockchain data
@@ -115,7 +158,19 @@ A modern, feature-rich blockchain explorer for EVM-compatible networks (Ethereum
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🚀 Usage
+## 🚀 Quick Start & Usage
+
+### Ecosystem Navigation
+
+Access all features from the navigation menu:
+- **Home** - Landing page with search and feature overview
+- **Dashboard** - Real-time network analytics and statistics
+- **Gas Tracker** - Live gas prices and cost calculator
+- **Tokens** - ERC20 token analytics and search
+- **NFT** - NFT collection explorer and ownership lookup
+- **Portfolio** - Multi-wallet tracking and aggregation
+- **Compare** - Side-by-side network comparison
+- **API** - Developer documentation and endpoints
 
 ### Search Examples
 
@@ -153,41 +208,65 @@ Use the network selector in the header to switch between:
 
 ```
 Simple-Blockchain-Explorer-Mini-Scan-/
-├── app/                          # Next.js App Router
-│   ├── api/                      # API Routes
-│   │   ├── address/[address]/   # Address data endpoint
-│   │   ├── block/[block]/       # Block data endpoint
-│   │   ├── transaction/[hash]/  # Transaction data endpoint
-│   │   └── contract/[address]/  # Contract data endpoint
-│   ├── address/[address]/       # Address page
-│   ├── block/[block]/           # Block page
-│   ├── tx/[hash]/               # Transaction page
-│   ├── contract/[address]/      # Contract page
-│   ├── layout.tsx               # Root layout
-│   ├── page.tsx                 # Home page
-│   └── globals.css              # Global styles
-├── components/                   # React components
-│   ├── Card.tsx                 # Reusable card component
-│   ├── CopyButton.tsx           # Copy to clipboard button
-│   ├── GasChart.tsx             # Gas usage chart
-│   ├── Loading.tsx              # Loading spinner
-│   ├── NetworkSelector.tsx      # Network dropdown
-│   ├── SearchBar.tsx            # Search input
-│   ├── ThemeToggle.tsx          # Dark/light theme toggle
-│   └── TransactionChart.tsx     # Transaction value chart
-├── lib/                          # Utilities and helpers
-│   ├── blockchain.ts            # Blockchain interaction logic
-│   └── networks.ts              # Network configurations
-├── types/                        # TypeScript types
-│   └── index.ts                 # Type definitions
-├── utils/                        # Utility functions
-│   └── format.ts                # Formatting helpers
-├── public/                       # Static assets
-├── .env.example                 # Environment variables template
-├── next.config.js               # Next.js configuration
-├── tailwind.config.ts           # Tailwind configuration
-├── tsconfig.json                # TypeScript configuration
-└── package.json                 # Dependencies
+├── app/                              # Next.js App Router
+│   ├── api/                          # API Routes
+│   │   ├── address/[address]/       # Address data endpoint
+│   │   ├── block/[block]/           # Block data endpoint
+│   │   ├── transaction/[hash]/      # Transaction data endpoint
+│   │   ├── contract/[address]/      # Contract data endpoint
+│   │   ├── dashboard/               # Analytics endpoints
+│   │   │   ├── stats/               # Network statistics
+│   │   │   ├── gas-history/         # Gas price history
+│   │   │   └── tx-history/          # Transaction volume
+│   │   ├── tokens/                  # Token endpoints
+│   │   │   ├── top/                 # Top tokens list
+│   │   │   └── info/                # Token information
+│   │   └── nft/                     # NFT endpoints
+│   │       ├── collection/          # Collection info
+│   │       └── owned/               # NFTs by owner
+│   ├── address/[address]/           # Address explorer page
+│   ├── block/[block]/               # Block inspector page
+│   ├── tx/[hash]/                   # Transaction details page
+│   ├── contract/[address]/          # Contract inspector page
+│   ├── dashboard/                   # Analytics dashboard page
+│   ├── gas-tracker/                 # Gas tracker page
+│   ├── tokens/                      # Token analytics page
+│   ├── nft/                         # NFT gallery page
+│   ├── portfolio/                   # Portfolio tracker page
+│   ├── compare/                     # Network comparison page
+│   ├── api-docs/                    # API documentation page
+│   ├── layout.tsx                   # Root layout with navigation
+│   ├── page.tsx                     # Home/landing page
+│   └── globals.css                  # Global styles
+├── components/                       # React components
+│   ├── Card.tsx                     # Reusable card component
+│   ├── StatCard.tsx                 # Statistics card
+│   ├── CopyButton.tsx               # Copy to clipboard button
+│   ├── GasChart.tsx                 # Gas usage chart
+│   ├── TransactionChart.tsx         # Transaction value chart
+│   ├── NetworkStatsChart.tsx        # Network statistics chart
+│   ├── Loading.tsx                  # Loading spinner
+│   ├── NetworkSelector.tsx          # Network dropdown
+│   ├── SearchBar.tsx                # Search input
+│   └── ThemeToggle.tsx              # Dark/light theme toggle
+├── lib/                              # Core libraries
+│   ├── blockchain.ts                # Blockchain interaction logic
+│   ├── networks.ts                  # Network configurations
+│   └── services/                    # Service layer
+│       ├── analytics.ts             # Analytics services
+│       ├── tokens.ts                # Token services
+│       └── nft.ts                   # NFT services
+├── types/                            # TypeScript types
+│   ├── index.ts                     # Core type definitions
+│   └── ecosystem.ts                 # Ecosystem types
+├── utils/                            # Utility functions
+│   └── format.ts                    # Formatting helpers
+├── public/                           # Static assets
+├── .env.example                     # Environment variables template
+├── next.config.js                   # Next.js configuration
+├── tailwind.config.ts               # Tailwind configuration
+├── tsconfig.json                    # TypeScript configuration
+└── package.json                     # Dependencies
 ```
 
 ## 🔌 API Endpoints
@@ -325,18 +404,22 @@ theme: {
 - Contract ABI must be provided manually
 - Functions with parameters not yet supported in UI
 
-### Planned Enhancements
-- [ ] SQLite transaction indexing for full history
-- [ ] ENS name resolution
-- [ ] ERC20 token detection and display
-- [ ] NFT (ERC721/ERC1155) viewer
-- [ ] WebSocket support for live updates
-- [ ] Contract verification integration
-- [ ] Advanced search filters
-- [ ] Export transaction history
-- [ ] Growth statistics dashboard
-- [ ] Gas price tracker
-- [ ] Mempool viewer
+### Future Enhancements
+- [ ] SQLite/PostgreSQL transaction indexing for full history
+- [ ] ENS/Unstoppable domain name resolution
+- [ ] Real-time price feeds (CoinGecko/CoinMarketCap integration)
+- [ ] Advanced token metrics (holders, transfers, volume)
+- [ ] NFT marketplace data integration
+- [ ] DeFi protocol analytics (TVL, APY, yields)
+- [ ] Whale wallet tracking and alerts
+- [ ] Mempool transaction viewer
+- [ ] WebSocket live updates
+- [ ] Contract source code verification
+- [ ] Advanced search and filtering
+- [ ] CSV/JSON export functionality
+- [ ] User accounts and saved searches
+- [ ] Email/push notifications
+- [ ] Mobile app (React Native)
 
 ## 📝 License
 
